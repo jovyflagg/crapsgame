@@ -6,6 +6,7 @@ import { useState } from 'react';
 export default function Home() {
 
   const [diceSum, setDiceSum] = useState(0);
+  const [count, setCount] = useState(0);
   // const sum = Math.floor(Math.random() * 6 + 1);
   
  
@@ -13,9 +14,10 @@ export default function Home() {
     console.log("rolling the dice...");
     const die1 = Math.floor(Math.random() * 6 + 1);
     const die2 = Math.floor(Math.random() * 6 + 1);
-
     const sum = die1 + die2;
     setDiceSum(sum);
+    setCount(prev => prev + 1);
+    
   }
 
   return (
@@ -46,7 +48,7 @@ export default function Home() {
 
         >
           <h2>
-            # of ROLLS:
+           {count} # of ROLLS:
           </h2>
 
         </a>
