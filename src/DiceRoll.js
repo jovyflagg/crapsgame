@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const DiceRoll = () => {
     
+    const[diceSum, setDiceSum] = useState(-1);
+
+
     // const sum = 0;
     // int count = 0;
     // while (sum != 7) {
@@ -16,6 +19,7 @@ const DiceRoll = () => {
         <>
             <div>DiceRoll</div>
         {/* button for dice roll */}
+        {diceSum}
         </>
 
     )
