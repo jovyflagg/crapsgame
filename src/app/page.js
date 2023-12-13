@@ -5,16 +5,25 @@ import { useState } from 'react';
 
 export default function Home() {
 
+<<<<<<< HEAD
   const [diceSum, setDiceSum] = useState([]);
   const [streak, setStreak] = useState(0);
   const [comeout, setComeOut] = useState(true);
 
 
+=======
+  const [diceSum, setDiceSum] = useState(0);
+  const [count, setCount] = useState(0);
+  // const sum = Math.floor(Math.random() * 6 + 1);
+  
+ 
+>>>>>>> f31541290a9fd54138f472c851068f8a83b382da
   const rollDice = () => {
     console.log("rolling the dice...");
     const die1 = Math.floor(Math.random() * 6 + 1);
     const die2 = Math.floor(Math.random() * 6 + 1);
     const sum = die1 + die2;
+<<<<<<< HEAD
     // const sum = 5;
     setDiceSum(pre => [...pre,sum]);
 
@@ -25,6 +34,11 @@ export default function Home() {
     } else {
       pointSwitch(sum)
     }
+=======
+    setDiceSum(sum);
+    setCount(prev => prev + 1);
+    
+>>>>>>> f31541290a9fd54138f472c851068f8a83b382da
   }
 
   const pointSwitch = (sum) => {
@@ -105,7 +119,11 @@ export default function Home() {
         <a
         >
           <h2>
+<<<<<<< HEAD
             {streak} # of roll streak
+=======
+           {count} # of ROLLS:
+>>>>>>> f31541290a9fd54138f472c851068f8a83b382da
           </h2>
         </a>
       </div>
